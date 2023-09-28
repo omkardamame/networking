@@ -23,7 +23,7 @@ vim /etc/hosts
 Here you can add your host names with their IPs.
 You can always assign multiple host names to same IP.
 
-![[dns_hosts.png]]
+![dns_hosts.png](https://github.com/omkardamame/networking/blob/main/DNS/dns_hosts.png)
 
 So when using ``CURL`` or ``SSH`` you can just use their name.
 
@@ -38,7 +38,7 @@ This system is efficient for small network with very few hosts but as hosts keep
 In this case, we create a server which only handles these changes centrally, we call it DNS server.
 Now we just point all hosts to look up that server to resolve the IP addresses.
 
-![[dns_dns.png]]
+![dns_dns.png](https://github.com/omkardamame/networking/blob/main/DNS/dns_hosts.png)
 
 So in order to set DNS on each hosts, change in ``resolv.conf`` file,
 
@@ -54,7 +54,7 @@ nameserver  192.168.1.100
 
 We then no longer need entries in hosts file.
 
-![[dns_changing_dns.png]]
+![[dns_changing_dns.png]](https://github.com/omkardamame/networking/blob/main/DNS/dns_changing_dns.png)
 
 ## 3. Priority for name resolution
 
@@ -102,7 +102,7 @@ There are basic record types such as,
 2. AAAA: It stores IPv6 to hostname
 3. CNAME: Mapping one name to another name (name to name mapping)
 
-![[dns_record_types.png]]
+![[dns_record_types.png]](https://github.com/omkardamame/networking/blob/main/DNS/dns_record_types.png)
 
 ## 6. nslookup
 
@@ -112,11 +112,11 @@ You can use ``nslookup`` to query a hostname from a DNS server.
 It DOES NOT consider the entries in local hosts file.
 It only queries DNS server.
 
-![[dns_nslookup.png]]
+![[dns_nslookup.png]](https://github.com/omkardamame/networking/blob/main/DNS/dns_nslookup.png)
 
 ## 7. dig
 
 Also, it is an another tool to test DNS resolution.
 It returns more details in similar form as it stored on the server.
 
-![[dns_dig.png]]
+![[dns_dig.png]](https://github.com/omkardamame/networking/blob/main/DNS/dns_dig.png)
