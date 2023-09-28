@@ -14,7 +14,7 @@ ip addr add 192.168.1.10 dev eth0
 
 Doing this on both sides (hosts) enables pinging between them and only enables communication within the network.
 
-![[networking_switching.png]]
+![[networking_switching.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_switching.png)
 
 ## 2. Router and Gateway
 
@@ -22,7 +22,7 @@ Consider we have another network with address 192.168.2.0
 The systems C and D have IPs 192.168.2.10 and 192.168.2.11 resp.
 So the question is how they can communicate?
 
-![[networking_routing1.png]]
+![[networking_routing1.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_routing1.png)
 
 Here router comes in place.
 
@@ -33,7 +33,7 @@ In this case, as it connects to two network, it gets assigned with two IPs.
 In 1st network, we assign it an IP address - 192.168.1.1
 In 2nd network, we assign it an IP address - 192.168.2.1
 
-![[networking_routing2.png]]
+![[networking_routing2.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_routing2.png)
 
 Consider system C wants to send packets to system D but how can it do it?
 As router is just an another device on network, there could be multiple devices on multiple networks.
@@ -59,7 +59,7 @@ This displayed Kernel's routing table.
 
 In this case, there is noting in routing table
 
-![[networking_routing3.png]]
+![[networking_routing3.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_routing3.png)
 
 To configure a gateway on system B to reach system on network 192.168.2.0 we need to run ip route command
 
@@ -73,7 +73,7 @@ ip route add <network_base_ip> via <gateway>
 
 Running the command shows route is added.
 
-![[networking_routing4.png]]
+![[networking_routing4.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_routing4.png)
 
 
 Remember, this has to be configured through all the systems.
@@ -105,7 +105,7 @@ The `0.0.0.0` entry indicates that you don't need a gateway
 
 Consider another case where system A want to ping system C but unable to communicate as there is not routing configuration. Here as we did above we can do like this.
 
-![[networking_ip_forwarding1.png]]
+![[networking_ip_forwarding1.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_ip_forwarding1.png)
 
 Doing this will configure the routing but we will get an empty response when pinging 192.168.2.5 from 192.168.1.5
 
@@ -119,11 +119,11 @@ In order to do it, we need to change value 0 to 1 in following path,
 cd /proc/sys/net/ipv4/ip_forward
 ```
 
-![[networking_ip_forwarding2.png]]
+![[networking_ip_forwarding2.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_ip_forwarding2.png)
 
 This way it is NOT persistent, to make it persistent we'll need to change value to 1
 
-![[networking_ip_forwarding3.png]]
+![[networking_ip_forwarding3.png]](https://github.com/omkardamame/networking/blob/main/Networking%20Basics/networking_ip_forwarding3.png)
 
 ```bash
 cd /etc/sysctl.conf
