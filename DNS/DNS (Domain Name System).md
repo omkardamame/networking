@@ -71,7 +71,7 @@ This priority can be changed from ``nsswitch.conf`` file
 vim /etc/nsswitch.conf
 ```
 
-![[dns_priority.png]]
+![[dns_priority.png]](https://github.com/omkardamame/networking/blob/main/DNS/dns_priority.png)
 
 Here `files` is present in 1st which means system will look into hosts file for name resolution before going to DNS server.
 
