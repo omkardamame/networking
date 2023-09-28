@@ -38,7 +38,7 @@ This system is efficient for small network with very few hosts but as hosts keep
 In this case, we create a server which only handles these changes centrally, we call it DNS server.
 Now we just point all hosts to look up that server to resolve the IP addresses.
 
-![dns_dns.png](https://github.com/omkardamame/networking/blob/main/DNS/dns_hosts.png)
+![dns_dns.png](https://github.com/omkardamame/networking/blob/main/DNS/dns_dns.png)
 
 So in order to set DNS on each hosts, change in ``resolv.conf`` file,
 
